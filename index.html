@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Dulien's Corner Store</title>
+
+    <div class="head">
+        <h1>Dulien's Corner Store</h1>
+        <p>Your friendly neighborhood online grocery.</p>
+    </div>
+
+</head>
+
+<body onload="openPage()">
+
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about yourself.</p>
+  Select your product preferences:<br>
+  <div class="preferences">
+    <input type="checkbox" class="checkbox" id="LactoseIntolerant" name="LactoseIntolerant" onclick="setUnchecked1();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="LactoseIntolerant">Lactose intolerant</label><br>
+    <input type="checkbox" class="checkbox" id="NutAllergy" name="NutAllergy" onclick="setUnchecked1();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="NutAllergy">Nut allergy</label><br>
+    <input type="checkbox" class="checkbox" id="Organic" name="Organic" onclick="setUnchecked1();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="Organic">Organic</label><br>
+    <input type="checkbox" class="checkbox" id="NoPreference" name="NoPreference" onclick="setUnchecked2();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="NoPreference">No preference</label>
+  </div>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	  Choose items to buy:<br><br>
+    <div id="displayProduct" class="displayProduct"></div>
+    <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart
+	</button><br>
+  <p id="success" style="color:green;">* Items successfully added to cart</p>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div><br>
+  Please select your delivery method:<br>
+  <div class="method">
+    <input type="radio" id="delivery" name="method" value="delivery">
+    <label for="delivery">Delivery</label><br>
+    <input type="radio" id="pickup" name="method" value="pickup">
+    <label for="pickup">Pickup from nearby location</label>
+  </div>
+  <div class="submit">
+    <button id="submit" class="sub" onclick="location.reload(true);">Submit</button>
+  </div>
+</div>
+
+<div class="buttons">
+  <button id="prev" class="nextprev" onclick="prevPage()">Previous</button>
+  <button id="next" class="nextprev" onclick="nextPage()">Next</button>
+  <p id="error" style="color:red;">* Please make a selection before proceeding.</p>
+</div>
+
+<footer>
+  <p>Website designed by Dulien</p>
+</footer>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

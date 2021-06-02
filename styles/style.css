@@ -1,0 +1,144 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+
+html {
+  font-family: Helvetica;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #dddfd4;
+}
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+  background-color: #bebebe;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+  background-color: #b0b4a0;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.head {
+  padding: 50px;
+  text-align: center;
+  background-image: url("grocery-labels-header.jpg");
+  color: #173e43;
+  font-size: 30px;
+  text-shadow: -1px -1px 0 #dddfd4, 1px -1px 0 #dddfd4, -1px 1px 0 #dddfd4, 1px 1px 0 #dddfd4;
+}
+
+.head p {
+  color: #fae596;
+  text-shadow: -1px -1px 0 #173e43, 1px -1px 0 #173e43, -1px 1px 0 #173e43, 1px 1px 0 #173e43;
+}
+
+.preferences {
+  padding-left: 20px;
+}
+
+.displayProduct {
+  padding-left: 20px;
+}
+
+.block {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 92px;
+  background-color: #173e43;
+  color: #dddfd4;
+  padding: 10px;
+  border-style: none;
+}
+
+.block:hover {
+  background-color: #1b484e;
+}
+
+.block:active {
+  background-color: #21585f;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3fb0ac;
+  color: #dddfd4;
+  text-align: center;
+}
+
+.nextprev {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #fae596;
+  color: #1b484e;
+  border-style: none; 
+}
+
+.nextprev:active {
+  background-color: #ffda55;
+}
+
+#next {
+  padding: 10px 25px 10px 25px;
+  margin-left: 10px;
+}
+
+#prev {
+  padding: 10px 10px 10px 10px;
+}
+
+.tabcontent h3 {
+  text-decoration: underline;
+  text-decoration-color: #3fb0ac;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #fff5d0;
+  color: #2a5c63;
+}
+
+.method {
+  padding-left: 20px;
+}
+
+.sub {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 50px;
+  background-color: #173e43;
+  color: #dddfd4;
+  padding: 10px 20px 10px 20px;
+  border-style: none;
+}
